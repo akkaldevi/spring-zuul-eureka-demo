@@ -1,0 +1,17 @@
+ -X GET http://localhost:9100/sample-service-a/welcomeMsg
+
+
+curl -k -i -X GET http://localhost:9100/sample-service-a/welcomeMsg
+
+http://localhost:8180/sample-service-a/welcomeMsg
+
+http://localhost:9100/routes   ( zuul routes)
+
+http://localhost:8761/
+
+http://localhost:8761/eureka
+
+http://172.31.99.209:8180/sample-service-a/health
+	fetch = +refs/heads/*:refs/remotes/heroku/*
+	fetch = +refs/heads/*:refs/remotes/heroku/*
+	letch = +refs/heads/*:refs/remotes/heroku/*

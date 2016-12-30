@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: zull-gateway-service
+server:
+  port: 9100
+
+ribbon:
+  eureka:
+    enabled: true
+  listOfServers: http://localhost:8761/**
+
+zuul:
+  # prefix: /sample-service-a
+  IsSecure: false
+  routes:
+    sample-service-a:
+      # path: /sample-service-a/**
+      # serviceId: SAMPLE-SERVICE-A
+      serviceId: SAMPLE-SERVICE-A
+      # url: http://localhost:8180/sample-service-a
+    sample-service-b:
+      # serviceId: SAMPLE-SERVICE-A
+      # serviceId: SAMPLE-SERVICE-B
+      url: http://localhost:8181/sample-service-b
+    # sample-service-b:
+    #   url: http://localhost:8181/sample-service-b
+    # sample-service-c:
+    #   url: http://localhost:8182/sample-service-c
+
+# zuul:
+#   routes:
+#     sample-service-a:
+#       url: http://localhost:8180/sample-service-a
+
+
+# zuul:
+#   #Service will be mapped under the /api URI
+#   # prefix: /sample-service-a
+# #  Uncomment to disable auto-registering all services read from Eureka
+#   # ignoredServices: '*'
+#   routes:
+#     sample-service-a:
+#       path: /sample-service-a/**
+#       url: http://localhost:8180

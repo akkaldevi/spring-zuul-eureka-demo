@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: sample-service-b
+
+server:
+  context-path: /sample-service-b
+  port: 8181
+
+eureka:
+  instance:
+    homePageUrl: https://${eureka.hostname}/sample-service-a
+    # homePageUrl: http://localhost:8180/sample-service-a/
+    statusPageUrlPath: /${server.context-path}/info
+    healthCheckUrlPath: /${server.context-path}/health

@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: sample-service-a
+
+server:
+  context-path: /sample-service-a
+  port: 8180
+
+# management:
+#   context-path: /sample-service-a
+
+eureka:
+  instance:
+    homePageUrl: https://${eureka.hostname}/sample-service-a
+    # homePageUrl: http://localhost:8180/sample-service-a/
+    statusPageUrlPath: /${server.context-path}/info
+    healthCheckUrlPath: /${server.context-path}/health
+
+
+# eureka:
+#   client:
+#     serviceUrl:
+#       defaultZone: http://localhost:8761/eureka/

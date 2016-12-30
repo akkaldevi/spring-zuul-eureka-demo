@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: sample-service-c
+
+server:
+  context-path: /sample-service-c
+  port: 8182
